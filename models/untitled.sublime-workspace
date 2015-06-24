@@ -1,0 +1,358 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"subscr",
+				"subscriber_target"
+			],
+			[
+				"topic",
+				"topics_i_follow"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/mjk/code/appacademy/q1.rb",
+			"settings":
+			{
+				"buffer_size": 419,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/mjk/code/activity-streams/grape-accost/db/migrations/3_create_document_table.rb",
+		"/home/mjk/code/activity-streams/grape-accost/endpoints/document_api.rb",
+		"/home/mjk/code/activity-streams/grape-accost/models/document.rb",
+		"/home/mjk/code/activity-streams/grape-accost/models/object.rb",
+		"/home/mjk/code/activity-streams/grape-accost/db/migrations/4_create_object_model_table.rb",
+		"/home/mjk/code/activity-streams/grape-accost/db/migrations/1_create_actor_and_activity_table.rb",
+		"/home/mjk/code/activity-streams/grape-accost/models/activity.rb",
+		"/home/mjk/code/activity-streams/grape-accost/endpoints/feed_api.rb",
+		"/home/mjk/code/activity-streams/grape-accost/db/migrations/2_create_subscription_table.rb",
+		"/home/mjk/code/activity-streams/grape-accost/Gemfile",
+		"/home/mjk/code/activity-streams/grape-accost/models/subscription.rb",
+		"/home/mjk/code/activity-streams/grape-accost/services/activity/activity_service.rb",
+		"/home/mjk/code/activity-streams/grape-accost/initializers/10_sequel.rb",
+		"/home/mjk/code/activity-streams/grape-accost/models/actor.rb",
+		"/home/mjk/code/activity-streams/grape-accost/config/environment.rb",
+		"/home/mjk/code/activity-streams/grape-accost/config/application.rb",
+		"/home/mjk/code/activity-streams/grape-accost/Rakefile",
+		"/home/mjk/code/activity-streams/grape-accost/spec/spec_helper.rb",
+		"/home/mjk/code/activity-streams/grape-accost/endpoints/target_api.rb",
+		"/home/mjk/code/activity-streams/grape-accost/models/actor_activity.rb",
+		"/home/mjk/code/activity-streams/grape-accost/models/target.rb",
+		"/home/mjk/code/activity-streams/grape-accost/endpoints/objects_api.rb",
+		"/home/mjk/code/activity-streams/grape-accost/Guardfile",
+		"/home/mjk/code/activity-streams/grape-accost/spec/endpoints/objects_api_spec.rb",
+		"/home/mjk/code/activity-streams/grape-accost/spec/endpoints/actors_api_spec.rb",
+		"/home/mjk/code/activity-streams/grape-accost/config.ru",
+		"/home/mjk/code/activity-streams/grape-accost/endpoints/actors_api.rb",
+		"/home/mjk/code/activity-streams/grape-accost/endpoints/verb_api.rb",
+		"/home/mjk/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/mjk/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/mjk/code/activity-streams/grape-accost/endpoints/create_api.rb",
+		"/home/mjk/code/facebook-photo-printer/work/complete-api/Capfile",
+		"/home/mjk/code/facebook-photo-printer/work/complete-api/config/deploy.rb",
+		"/home/mjk/code/facebook-photo-printer/work/complete-api/config/application.rb",
+		"/home/mjk/code/facebook-photo-printer/fb-dl-api/untitled.sublime-project",
+		"/home/mjk/code/search-rabbit/search-rabbit/extension/popup.html",
+		"/home/mjk/code/search-rabbit/search-rabbit/extension/popup.js",
+		"/home/mjk/code/search-rabbit/search-rabbit/extension/manifest.json",
+		"/home/mjk/code/bobody/ioswitch/src/main/main.cpp"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"puts",
+			"print",
+			"activity_service",
+			"Activity",
+			"do",
+			"grape",
+			"namespace",
+			"route",
+			"current_user",
+			"CompleteAPI",
+			"console",
+			"line",
+			"line    int j;\n    j++;\n    int j;\n    j++;\n",
+			"line",
+			"move up",
+			"line"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Activities"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/mjk/code/appacademy/q1.rb",
+					"settings":
+					{
+						"buffer_size": 419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								360,
+								360
+							],
+							[
+								381,
+								381
+							],
+							[
+								403,
+								403
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 44.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"subsc",
+				"models/subscription.rb"
+			],
+			[
+				"1_",
+				"db/migrations/1_create_actor_and_activity_table.rb"
+			],
+			[
+				"activit",
+				"models/activity.rb"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"activi",
+				"models/activity.rb"
+			],
+			[
+				"1",
+				"initializers/10_sequel.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"appli",
+				"config/application.rb"
+			],
+			[
+				"environ",
+				"config/environment.rb"
+			],
+			[
+				"applica",
+				"config/application.rb"
+			],
+			[
+				"activitycreaser",
+				"services/activity/activity_create_service.rb"
+			],
+			[
+				"server",
+				"server.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"activity",
+				"models/activity.rb"
+			],
+			[
+				"actor.rb",
+				"models/actor.rb"
+			],
+			[
+				"actor.r",
+				"models/actor.rb"
+			],
+			[
+				"ac",
+				"db/migrations/1_create_actor.rb"
+			],
+			[
+				"actorac",
+				"models/actor_activity.rb"
+			],
+			[
+				"rakef",
+				"Rakefile"
+			],
+			[
+				"applic",
+				"config/application.rb"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"spec",
+				"spec/spec_helper.rb"
+			],
+			[
+				"config.ru",
+				"config.ru"
+			],
+			[
+				"actorsp",
+				"spec/endpoints/actors_api_spec.rb"
+			],
+			[
+				"actor",
+				"spec/endpoints/actors_api_spec.rb"
+			],
+			[
+				"guard",
+				"Guardfile"
+			],
+			[
+				"rake",
+				"Rakefile"
+			],
+			[
+				"application",
+				"config/application.rb"
+			],
+			[
+				"main.cpp",
+				"ioswitch/src/main/main.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 213.0,
+	"status_bar_visible": true
+}

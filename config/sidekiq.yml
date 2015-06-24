@@ -1,0 +1,4 @@
+:require: ./config/environment.rb
+:queues:
+  - default
+  - [feed_creation, 5]
