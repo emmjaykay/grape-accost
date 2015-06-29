@@ -33,6 +33,11 @@ RSpec.configure do |config|
   config.after(:each) do
     REDIS.flushdb
   end
+
+  config.filter_run :focus => true
+  config.run_all_when_everything_filtered = true
+  # https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/filtering/run-all-when-everything-filtered
+  # https://www.relishapp.com/rspec/rspec-core/v/2-6/docs/filtering/inclusion-filters
 end
 
 

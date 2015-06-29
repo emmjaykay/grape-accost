@@ -46,7 +46,6 @@ describe Feeds::FeedService do
         topic_uuid = 'jon'
         Feeds::FeedSubscriberService.subscribe_to_feed(subscriber_id, topic_uuid)
         id = Activities::ActivityService.queue(activity)
-        byebug
 
         params = {id: subscriber_id}
 
@@ -56,6 +55,19 @@ describe Feeds::FeedService do
         expect(stanis_feed).to include("feed" => [{"actor_uuid"=>"jon", "verb"=>"create", "object_uuid"=>"comment", "target_uuid"=>"target"}], "misc" => {"version"=>"v1"})
       end
 
+      it "can show items from before a subscription" do
+        subscriber_id = 'stanis'
+        topic_uuid = 'jon'
+        id = Activities::ActivityService.queue(activity)
+        Feeds::FeedSubscriberService.subscribe_to_feed(subscriber_id, topic_uuid)
+
+        params = {id: subscriber_id}
+
+        stanis_feed = Feeds::FeedService.get_feed(params)
+
+        expect(stanis_feed).not_to eq(nil)
+        expect(stanis_feed).to include("feed" => [{"actor_uuid"=>"jon", "verb"=>"create", "object_uuid"=>"comment", "target_uuid"=>"target"}], "misc" => {"version"=>"v1"})
+      end
     end # describe
   end # context
 end #describe
