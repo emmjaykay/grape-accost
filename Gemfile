@@ -25,3 +25,7 @@ group :development do
   gem 'factory_girl'
 end
 
+group :test do
+  gem 'rspec-sidekiq'
+  gem 'rspec_candy'
+end

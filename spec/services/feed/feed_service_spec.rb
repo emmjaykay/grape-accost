@@ -28,6 +28,12 @@ describe Feeds::FeedService do
       }
       end
 
+      let (:stanis_feed_hash) do {
+        :feed=>[{:actor_uuid=>"jon", :verb=>"create", :object_uuid=>"comment", :target_uuid=>"target"}], 
+        :misc=>{:version=>"v1"}
+      }
+      end
+
       it "can do feed" do
         id = Activities::ActivityService.queue(activity)
         feed = Feeds::FeedService.get_feed(get_params)
@@ -36,16 +42,18 @@ describe Feeds::FeedService do
       end # it
 
       it "can allow subscriber to get a feed" do
-        id = Activities::ActivityService.queue(activity)
         subscriber_id = 'stanis'
         topic_uuid = 'jon'
-        params = {id: subscriber_id}
         Feeds::FeedSubscriberService.subscribe_to_feed(subscriber_id, topic_uuid)
+        id = Activities::ActivityService.queue(activity)
         byebug
+
+        params = {id: subscriber_id}
 
         stanis_feed = Feeds::FeedService.get_feed(params)
 
-        expect(stanis_feed).not_to eq([])
+        expect(stanis_feed).not_to eq(nil)
+        expect(stanis_feed).to include("feed" => [{"actor_uuid"=>"jon", "verb"=>"create", "object_uuid"=>"comment", "target_uuid"=>"target"}], "misc" => {"version"=>"v1"})
       end
 
     end # describe

@@ -8,6 +8,7 @@ require 'rake'
 require 'factory_girl'
 require 'sequel'
 require 'database_cleaner'
+require 'sidekiq/testing'
 
 DatabaseCleaner.clean_with :truncation
 
@@ -15,7 +16,6 @@ DatabaseCleaner.strategy = :transaction
 
 RSpec.configure do |config|
   config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
   end
 
@@ -23,6 +23,15 @@ RSpec.configure do |config|
     DatabaseCleaner.cleaning do
       example.run
     end
+  end
+
+  config.around(:each) do |example|
+    # https://github.com/mperham/sidekiq/wiki/Testing
+    Sidekiq::Testing.inline!(&example)
+  end 
+
+  config.after(:each) do
+    REDIS.flushdb
   end
 end
 
