@@ -19,10 +19,12 @@ Finally, add whatever environment variables you need to each of those files. Rig
 need DATABASE_URL defined. For example in the development file, I have
 
     DATABASE_URL='sqlite://db-development.sqlite'
+    REDIS_URL='redis://localhost:6379/dev'
 
 and in test
 
     DATABASE_URL='sqlite://db-test.sqlite'
+    REDIS_URL='redis://localhost:6379/test'
 
 Start sidekiq from the project's root directory with
 
