@@ -9,10 +9,12 @@ require 'factory_girl'
 require 'sequel'
 require 'database_cleaner'
 require 'sidekiq/testing'
+require 'rack/test'
 
 DatabaseCleaner.clean_with :truncation
-
 DatabaseCleaner.strategy = :transaction
+
+Dir[File.dirname(__FILE__) + ("/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
   config.before(:suite) do

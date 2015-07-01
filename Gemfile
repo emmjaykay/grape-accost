@@ -28,4 +28,5 @@ end
 group :test do
   gem 'rspec-sidekiq'
   gem 'rspec_candy'
+  gem 'rack-test'
 end

@@ -110,6 +110,8 @@ GEM
       rack (>= 0.4)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
+    rack-test (0.6.3)
+      rack (>= 1.0)
     rake (10.4.2)
     rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
@@ -185,6 +187,7 @@ DEPENDENCIES
   guard-rspec
   nenv
   rack (~> 1.5.2)
+  rack-test
   rb-inotify
   redis
   rspec-sidekiq

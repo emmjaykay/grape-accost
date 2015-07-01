@@ -7,8 +7,7 @@ FactoryGirl.define do
         object_uuid: 'comment',
         target_uuid: 'target'
       }
-      #Activities::ActivityCreateService.create!(user_params)
-      #user_params.instance_variable_set :@activity, aktivity
+
       user_params.save
     end
   end
