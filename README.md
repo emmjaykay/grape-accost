@@ -45,6 +45,22 @@ Start sidekiq from the project's root directory with
     curl -H "Content-Type: application/json" localhost:9292/api/subscribe/stannis --data '{ "topic_uuid":"jon"}'
 
 
+## Architecture
+
+An activity can be phrased as
+
+    <actor> <verb'd> <target object> <optional collection object>
+
+So, for example,
+
+    <jon> <created> <a comment object> <in a post object>
+
+Each activity is then stored into the DB and can be put into a feed, or list of objects for later retrieval. Upon 
+Activity creation a pub-sub system kicks off a thread (wisper gem) that creates an ActivityFeed object that is really 
+a string of primary keys to Activity objects. 
+
+A presenter is called up to store the feed into a Redis DB. The feed is retrieved from there.
+
 #### TODO
   * REDIS integration
   * Integration Activity Stream 2.0 objects, and associated services
