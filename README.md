@@ -70,4 +70,4 @@ A presenter is called up to store the feed into a Redis DB. The feed is retrieve
     * DoS attack prevention
   * Find a way to recover feeds that are missing activities
 
-[.](http://mjk.freeshell.org/accost.gif)
+[.](http://mjk.freeshell.org/accost-2014Jul2.gif)
