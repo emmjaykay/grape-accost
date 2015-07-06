@@ -44,6 +44,9 @@ Start sidekiq from the project's root directory with
 
     curl -H "Content-Type: application/json" localhost:9292/api/subscribe/stannis --data '{ "topic_uuid":"jon"}'
 
+### Unsubscribe to another user's feed
+
+    curl -H "Content-Type: application/json" localhost:9292/api/unsubscribe/stannis --data '{ "topic_uuid":"jon"}' 
 
 ## Architecture
 

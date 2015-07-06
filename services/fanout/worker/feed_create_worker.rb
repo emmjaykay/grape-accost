@@ -58,9 +58,24 @@ module Fanout
           save_presented_feed(feed, subscriber_id)
 
         end # for each item from activity feed
+      end # perform
+    end # class
 
+    class FeedUnsubscribeWorker < FeedWorker
+      def perform(subscriber_id, subscribee_id)
+        items_from_activity_feed = ActivityFeed.where(actor_uuid: subscribee_id)
+        items_from_activity_feed.each do |feed_item|
+          if ActivityFeed.where(actor_uuid: subscriber_id, activity_primary_id: feed_item[:activity_primary_id]).all() != []
+            feed_activity_item = ActivityFeed.where(actor_uuid: subscriber_id, activity_primary_id: feed_item[:activity_primary_id])
+            feed_activity_item.delete
+          end
+        end
 
-      end
-    end
+        feed = ActivityFeed.where(actor_uuid: subscriber_id).all()
+        save_presented_feed(feed, subscriber_id)
+
+      end # perform
+    end # class
+
   end # module
 end #module

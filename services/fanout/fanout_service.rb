@@ -12,6 +12,10 @@ module Fanout
         Fanout::Workers::FeedCreateWorker.perform_async(activity, activity_id)
       end
 
+      def fanout_for_unsubscribe(subscriber_id, subscribee_id)
+        Fanout::Workers::FeedUnsubscribeWorker.perform_async(subscriber_id, subscribee_id)
+      end
+
     end # class << self
   end # class FanoutService
 end # Fanout
