@@ -69,7 +69,7 @@ describe Feeds::FeedService do
         expect(stanis_feed).to include("feed" => [{"actor_uuid"=>"jon", "verb"=>"create", "object_uuid"=>"comment", "target_uuid"=>"target"}], "misc" => {"version"=>"v1"})
       end
 
-      it "can unsubscribe from a service", :focus do
+      it "can unsubscribe from a service" do
         subscriber_id = 'stanis'
         topic_uuid = 'jon'
         id = Activities::ActivityService.queue(activity)
@@ -85,7 +85,12 @@ describe Feeds::FeedService do
         Feeds::FeedUnsubscriberService.unsubscribe_from_feed(subscriber_id, topic_uuid)
 
         stanis_feed = Feeds::FeedService.get_feed(params)
+        
+        jon_feed = Feeds::FeedService.get_feed({id: 'jon'})
+
         expect(stanis_feed).to include("feed"=>[], "misc"=>{"version"=>"v1"})
+        expect(jon_feed).to include("feed" => [{"actor_uuid"=>"jon", "verb"=>"create", "object_uuid"=>"comment", "target_uuid"=>"target"}], "misc" => {"version"=>"v1"})
+
       end
     end # describe
   end # context

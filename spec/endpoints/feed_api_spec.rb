@@ -12,6 +12,7 @@ describe Feeds::FeedService do
       let(:user_params) { {actor_uuid: 'jon', verb:'create', object_uuid:'comment', target_uuid:'a post'} }
       let(:follow_jon) { {topic_uuid: "jon"} }
       let(:jon_feed_item) {{"feed"=>[{"actor_uuid"=>"jon", "verb"=>"create", "object_uuid"=>"comment", "target_uuid"=>"a post"}], "misc"=>{"version"=>"v1"}}}
+      let(:empty_feed) { {"feed"=>[], "misc"=>{"version"=>"v1"}} }
 
       it "should get a user's feed" do
         post "/api/create/", user_params
@@ -23,6 +24,20 @@ describe Feeds::FeedService do
         post "/api/create", user_params
         post "/api/subscribe/stannis", follow_jon
         get "/api/feed/stannis"
+        expect(JSON.parse(last_response.body)).to include(jon_feed_item)
+      end
+
+      it "should unsubscribe" do
+        post "/api/create", user_params
+        post "/api/subscribe/stannis", follow_jon
+        get "/api/feed/stannis"
+        expect(JSON.parse(last_response.body)).to include(jon_feed_item)
+
+        post "/api/unsubscribe/stannis", follow_jon
+        get "/api/feed/stannis"
+        expect(JSON.parse(last_response.body)).to include(empty_feed)
+
+        get "/api/feed/jon"
         expect(JSON.parse(last_response.body)).to include(jon_feed_item)
       end
     end #describe
