@@ -62,10 +62,9 @@ Each activity is then stored into the DB and can be put into a feed, or list of 
 Activity creation a pub-sub system kicks off a thread (wisper gem) that creates an ActivityFeed object that is really 
 a string of primary keys to Activity objects. 
 
-A presenter is called up to store the feed into a Redis DB. The feed is retrieved from there.
+A presenter is called up to store the feed into a Redis DB. The feed is retrieved from there for quick lookup.
 
 #### TODO
-  * REDIS integration
   * Integration Activity Stream 2.0 objects, and associated services
   * authentication
   * security items
