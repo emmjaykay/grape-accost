@@ -73,3 +73,4 @@ A presenter is called up to store the feed into a Redis DB. The feed is retrieve
   * Find a way to recover feeds that are missing activities
 
 [.](http://mjk.freeshell.org/accost-2014Jul2.gif)
+[![ghit.me](https://ghit.me/badge.svg?repo=emmjaykay/grape-accost)](https://ghit.me/repo/emmjaykay/grape-accost)
